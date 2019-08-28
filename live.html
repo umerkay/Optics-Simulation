@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optic Simulation</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+
+  <script src="shapes.js"></script>
+  <script src="miscellaneous.js"></script>
+  <script src="sources.js"></script>
+  <script src="optics.js"></script>
+  <script src="blocks.js"></script>
+  <script src="arc.js"></script>
+  <script src="tools.js"></script>
+  <script src="ray.js"></script>
+  <script src="interface.js"></script>
+  <script src="sketch.js"></script>
+</head>
+
+<body>
+  <div class="interface" style="display: flex; margin-bottom: 5px;">
+    <div>
+      <button id='hand' class='orange' onclick="
+      document.getElementById('main-select').value = 'hand';
+      document.getElementById('main-select').dispatchEvent(new Event('change'));
+      ">✋</button>
+      <select id="main-select">
+
+        <option value="hand"> Hand </option>
+
+        <optgroup label="Light Sources">
+          <option value="ray"> Ray </option>
+          <option value="pointLight"> Point Light </option>
+          <option value="beam"> Beam </option>
+        </optgroup>
+
+        <optgroup label="Thin Objects">
+          <option value="mirror"> Mirror </option>
+          <option value="void"> Void </option>
+          <option value="filter"> Filter </option>
+          <option value="lens"> Lens </option>
+          <option value="arc"> Arc </option>
+        </optgroup>
+
+        <optgroup label="Block Objects">
+          <option value="circle"> Circle </option>
+          <option value="polygon"> Polygon * </option>
+          <option value="rectblock"> Rectanlge </option>
+        </optgroup>
+
+        <optgroup label="Tools">
+          <option value="ruler"> Ruler </option>
+          <option value="d"> Protractor </option>
+        </optgroup>
+
+      </select>
+      <!--<select id='property'>
+      <option value=''> Move </option>
+      <option value='rotate'> Rotate </option>
+      <option value='resize'> Resize </option>
+    </select> -->
+
+      <button onclick="setScale(1/1.1);" class="blue">-</button>
+      <input type="range" min="0.1" max="3" value="1" step="0.01" id="scale" oninput="setScale();">
+      <button onclick="setScale(1.1);" class="blue">+</button>
+
+      <input type="color" value="#FFFF80" id="color">
+      <button onclick="mouse.delete();" class="red" id="delete" disabled="true">Delete</button>
+      <button onclick="location.reload();" class="blue">↺</button>
+      <button class="green" onclick="toggleGrid();" id="grid">Grid</button>
+      <input disabled id="output">
+    </div>
+    <div id="menu-sub" style="padding-top: 3px; box-sizing: border-box; max-height: 20px;">
+    </div>
+  </div>
+</body>
+
+</html>
