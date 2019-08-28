@@ -3,7 +3,7 @@ This application is built for simulating and demonstrating simple light behaviou
 
 *This application is in no way optimized or intended for smartphones and tablets*
 
-[View it live](https://umerkk164.github.io/Optics-Simulation/)
+[View it live](https://umerkk164.github.io/Optics-Simulation/live)
 
 This project uses p5.js, a canvas library. It was after this project that I built my own improved (for me) canvas library for JavaScript that does away with the global and non-modular nature of p5, while still remaining equally easy to use. Check out [needless](https://umerkk164.github.io/needlessjs/)
 
