@@ -1,4 +1,4 @@
-# Optics-Simulation
+# Optics Simulation
 This application is built for simulating and demonstrating simple light behaviours: reflection, refraction in mediums of different shapes and refractive indices, including circles and polygons, lens behaviours and light filters
 
 *This application is in no way optimized or intended for smartphones and tablets*
